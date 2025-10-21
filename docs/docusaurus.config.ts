@@ -9,7 +9,7 @@ const config: Config = {
   favicon: "img/logo_mini.svg",
 
   url: "https://github.com/",
-  baseUrl: "/deepcite/",
+  baseUrl: "/DeepCite/",
 
   organizationName: "deepcite",
   projectName: "deepcite",
