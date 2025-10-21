@@ -1,0 +1,14 @@
+{
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Papers": {
+    "message": "Papers",
+    "description": "Navbar item with label Papers"
+  },
+  "item.label.Projects": {
+    "message": "Projects",
+    "description": "Navbar item with label Projects"
+  }
+}

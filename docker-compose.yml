@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # Backend Flask Application
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=sqlite:///instance/deepcite.db
+      - FLASK_ENV=development
+      - CHROMA_PERSIST_DIRECTORY=./chroma_db
+      - CHROMA_TELEMETRY_ENABLED=false
+    volumes:
+      - ./backend:/app
+      - uploads_data:/app/uploads
+      - ./backend/instance:/app/instance
+      - ./backend/chroma_db:/app/chroma_db
+    command: python app.py
+
+  # Frontend Vue Application
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_BASE_URL=http://localhost:5000/api/v1
+    depends_on:
+      - backend
+    command: npm run dev
+
+volumes:
+  uploads_data:
