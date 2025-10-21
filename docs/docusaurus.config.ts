@@ -108,10 +108,6 @@ const config: Config = {
           label: "Projects",
           position: "left",
         },
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right',
-        // },
         {
           href: "https://github.com/nmkzzztos/DeepCite",
           position: "right",
