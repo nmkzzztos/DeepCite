@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdeepcite=self.webpackChunkdeepcite||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/deepcite/ru/blog","blogTitle":"Blog","authorsListPath":"/deepcite/ru/blog/authors"}')}}]);
