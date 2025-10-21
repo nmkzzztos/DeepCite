@@ -28,12 +28,15 @@ function HomepageHeader() {
               and prepares each citation for retrieval-augmented generation.
             </p>
             <div className={styles.buttons}>
-              <Link
+              <a 
                 className="button button--primary button--lg"
-                to="/attention.pdf">
+                href="/DeepCite/DeepCite.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{display: 'inline-flex', alignItems: 'center', gap: '8px'}}>
                 <FileText size={20} />
                 Paper
-              </Link>
+              </a>
               <Link
                 className="button button--outline button--secondary button--lg"
                 to="/docs/Backend/introduction">
